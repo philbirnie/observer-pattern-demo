@@ -2,7 +2,8 @@ version: '3.1'
 
 services:
   php:
-    image: php:7.1-apache
+    build:
+      context: "./docker/php"
     volumes:
       - "./.data/db:/var/lib/mysql"
       # Place mysql dump in mysql folder for automatic import
