@@ -8,6 +8,7 @@ class House implements Observable {
 
   public function handleIceCreamArrival(IceCream $iceCream) {
     $iceCream->putInFreezer();
+
     $this->foodContents[] = $iceCream;
 
     $this->notify($iceCream);
