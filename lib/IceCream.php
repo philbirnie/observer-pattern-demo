@@ -14,11 +14,11 @@ class IceCream {
   }
 
   public function eat() {
-    echo 'Yum!';
+    var_dump('Yum!');
   }
 
   public function putInFreezer() {
-    echo 'Thank you for putting me away';
+    var_dump('Thank you for putting me away');
   }
 
   /**
