@@ -18,7 +18,7 @@ class IceCream {
   }
 
   public function putInFreezer() {
-    var_dump('Thank you for putting me away');
+    var_dump("Thank you for putting the {$this->getFlavor()} ice cream away");
   }
 
   /**

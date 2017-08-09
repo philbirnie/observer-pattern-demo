@@ -7,6 +7,6 @@ interface Observable {
 
   public function detach(Observer $observer);
 
-  public function notify();
+  public function notify($object);
 
 }

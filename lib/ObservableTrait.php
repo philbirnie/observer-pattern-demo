@@ -5,7 +5,7 @@ trait ObservableTrait {
   protected $observers = [];
 
   public function attach(Observer $observer) {
-    $this->observers = [];
+    $this->observers[] = $observer;
   }
 
   public function detach(Observer $observer) {
@@ -14,10 +14,10 @@ trait ObservableTrait {
     });
   }
 
-  public function notify() {
+  public function notify($object) {
     /** @var \Observer $o */
     foreach($this->observers as $o) {
-      $o->update($this);
+      $o->update($object);
     }
   }
 

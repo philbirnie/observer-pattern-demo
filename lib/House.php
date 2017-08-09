@@ -10,6 +10,6 @@ class House implements Observable {
     $iceCream->putInFreezer();
     $this->foodContents[] = $iceCream;
 
-    $this->notify();
+    $this->notify($iceCream);
   }
 }
